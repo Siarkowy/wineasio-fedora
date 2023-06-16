@@ -11,6 +11,12 @@ PREFIX ?= /usr
 all:
 	@echo "error: you must pass '32' or '64' as an argument to this Makefile in order to build WineASIO"
 
+deps:
+	sudo dnf install -y gcc \
+		wine-devel.i686 \
+		wine-devel.x86_64 \
+		glibc-devel.i686
+
 # ---------------------------------------------------------------------------------------------------------------------
 
 32:
